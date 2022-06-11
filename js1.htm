@@ -1,0 +1,95 @@
+<html>
+	<head>
+	  <title>operators</title>
+	</head>
+	<body>
+	  <form align="center">
+	Enter num1:<input type="text" id="n1"><br><br>
+	Enter num2:<input type="text" id="n2"><br><br>
+	<button  type="button" onClick="sum()">Add</button><br><br>
+	Sum is:<input type="text" id="ans1"><br><br>
+	<button  type="button" onClick="diff()">Diff</button><br><br>
+	Difference is:<input type="text" id="ans2"><br><br>
+	<button  type="button"onClick="mul()">Mul</button><br><br>
+	Product is:<input type="text" id="ans3"><br><br>
+	<button type="button" onClick="div()">Div</button><br><br>
+	Division is:<input type="text" id="ans4"><br><br>
+	<button type="button" onClick="and()">Logical AND</button><br><br>
+	Logical AND is:<input type="text" id="ans5"><br><br>
+	<button type="button" onClick="or()">Logical OR</button><br><br>
+	Logical OR is:<input type="text" id="ans6"><br><br>
+	  </form>
+	  <script>
+	  
+      function sum()
+	{
+  	var a,b,c;
+ 	a=Number(document.getElementById("n1").value);
+  	b=Number(document.getElementById("n2").value);
+   	c=a+b;
+	document.getElementById("ans1").value=c;
+	}
+      function diff()
+	{
+	var a,b;
+ 	a=document.getElementById("n1").value;
+  	b=document.getElementById("n2").value;
+   var d;
+	d=a-b;
+	document.getElementById("ans2").value=d;
+	}
+      function mul()
+	{
+	var a,b;
+ 	a=document.getElementById("n1").value;
+  	b=document.getElementById("n2").value;
+    var e=a*b;
+	document.getElementById("ans3").value=e;
+	}
+      function div()
+	{
+	var a,b,f;
+ 	a=Number(document.getElementById("n1").value);
+  	b=Number(document.getElementById("n2").value);
+	if(a<b)
+	 {
+	 f=0;
+	document.getElementById("ans4").value=f;
+	 }
+	else
+	 {
+	f=a/b;
+	document.getElementById("ans4").value=f;
+	 }
+	}
+      function and()
+	{
+	var a,b;
+ 	a=Number(document.getElementById("n1").value);
+  	b=Number(document.getElementById("n2").value);
+	if(a%2==0&&b%2==0)
+	  {
+	document.getElementById("ans5").value="Both the numbers are even";
+	  }
+	else
+	  {
+	document.getElementById("ans5").value="condition doesn't satisfied";
+	  }
+	}
+      function or()
+	{
+        var a,b;
+ 	a=Number(document.getElementById("n1").value);
+  	b=Number(document.getElementById("n2").value);
+	if(a%2==0||b%2==0)
+	  {
+	document.getElementById("ans6").value="one of 2 numbers is even";
+	  }
+	else
+	  {
+	document.getElementById("ans6").value="condition doesn't satisfied";
+	  }
+	}
+	   </script>
+	</body>
+</html>
